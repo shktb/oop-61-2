@@ -1,6 +1,3 @@
-from lessons.lesson_2 import MageHero
-
-
 class Hero:
     def __init__(self, name, lvl, hp):
         self.name = name
@@ -43,6 +40,11 @@ class BankAccount:
         if type(self) == type(other):
             total_balance = self._balance + other._balance
             print (f"Сумма счетов: {total_balance}")
+    def __eq__(self, other):
+        if self.hero.lvl == other.hero.lvl and self.hero.name == other.hero.name:
+            return True
+        else:
+            return False
 
 
 
